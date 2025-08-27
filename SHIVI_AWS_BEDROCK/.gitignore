@@ -1,0 +1,28 @@
+
+.ipynb_checkpoints
+.langgraph_api/
+deep_research_from_scratch.egg-info/
+
+
+# OS junk
+.DS_Store
+
+# IDE settings
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+pyvenv.cfg
+CACHEDIR.TAG
+.env
+
+# Build artifacts
+*.egg-info/
+
+# Other optional ignores
+*.log
