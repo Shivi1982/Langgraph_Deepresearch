@@ -227,7 +227,7 @@ On macOS, `.env` files are hidden by default:
 #### 🥚 .egg-info/ Directory
 - **🎯 Purpose**: Tells Python "this folder IS a package that can be imported"
 - **📋 Contains**: Information ABOUT your local project (not external packages)
-- **🔧 Function**: `uv` installs YOUR project (e.g., `src/deep_research_from_scratch/`) as a package
+- **🔧 Function**: `uv` installs YOUR project (e.g., `src/Shivi_DeepResearch_Agent/`) as a package
 
 #### 🛠️ Build Tools Ecosystem
 
@@ -363,14 +363,14 @@ graph LR
 #### %%writefile Magic Command
 
 ```python
-%%writefile src/deep_research_from_scratch/state_scope.py
+%%writefile src/Shivi_DeepResearch_Agent/state_scope.py
 # Cell contents are written to file which helps to call this py into any other notebook
 ```
 
 **Usage Pattern:**
 ```python
 # Import the created file
-from src.deep_research_from_scratch.state_scope import *
+from src.Shivi_DeepResearch_Agent.state_scope import *
 ```
 
 ### 📨 LangChain Message System

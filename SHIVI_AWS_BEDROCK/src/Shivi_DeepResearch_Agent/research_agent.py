@@ -12,9 +12,9 @@ from langgraph.graph import StateGraph, START, END
 from langchain_core.messages import SystemMessage, HumanMessage, ToolMessage, filter_messages
 from langchain.chat_models import init_chat_model
 
-from deep_research_from_scratch.state_research import ResearcherState, ResearcherOutputState
-from deep_research_from_scratch.utils import tavily_search, get_today_str, think_tool
-from deep_research_from_scratch.prompts import research_agent_prompt, compress_research_system_prompt, compress_research_human_message
+from Shivi_DeepResearch_Agent.state_research import ResearcherState, ResearcherOutputState
+from Shivi_DeepResearch_Agent.utils import tavily_search, get_today_str, think_tool
+from Shivi_DeepResearch_Agent.prompts import research_agent_prompt, compress_research_system_prompt, compress_research_human_message
 
 # ===== CONFIGURATION =====
 

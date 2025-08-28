@@ -23,9 +23,9 @@ from langchain_core.messages import SystemMessage, HumanMessage, ToolMessage, fi
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.graph import StateGraph, START, END
 
-from deep_research_from_scratch.prompts import research_agent_prompt_with_mcp, compress_research_system_prompt, compress_research_human_message
-from deep_research_from_scratch.state_research import ResearcherState, ResearcherOutputState
-from deep_research_from_scratch.utils import get_today_str, think_tool, get_current_dir
+from Shivi_DeepResearch_Agent.prompts import research_agent_prompt_with_mcp, compress_research_system_prompt, compress_research_human_message
+from Shivi_DeepResearch_Agent.state_research import ResearcherState, ResearcherOutputState
+from Shivi_DeepResearch_Agent.utils import get_today_str, think_tool, get_current_dir
 
 # ===== CONFIGURATION =====
 

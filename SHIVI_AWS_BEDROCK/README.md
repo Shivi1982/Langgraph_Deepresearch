@@ -39,8 +39,8 @@ export PATH="/Users/$USER/.local/bin:$PATH"
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/langchain-ai/deep_research_from_scratch
-cd deep_research_from_scratch
+git clone https://github.com/langchain-ai/Shivi_DeepResearch_Agent
+cd Shivi_DeepResearch_Agent
 ```
 
 2. Install the package and dependencies (this automatically creates and manages the virtual environment):
@@ -66,7 +66,7 @@ ANTHROPIC_API_KEY=your_anthropic_api_key_here
 # Optional: For evaluation and tracing
 LANGSMITH_API_KEY=your_langsmith_api_key_here
 LANGSMITH_TRACING=true
-LANGSMITH_PROJECT=deep_research_from_scratch
+LANGSMITH_PROJECT=Shivi_DeepResearch_Agent
 ```
 
 4. Run notebooks or code using uv:

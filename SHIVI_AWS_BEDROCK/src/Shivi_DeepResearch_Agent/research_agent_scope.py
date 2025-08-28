@@ -17,8 +17,8 @@ from langchain_core.messages import HumanMessage, AIMessage, get_buffer_string
 from langgraph.graph import StateGraph, START, END
 from langgraph.types import Command
 
-from deep_research_from_scratch.prompts import clarify_with_user_instructions, transform_messages_into_research_topic_prompt
-from deep_research_from_scratch.state_scope import AgentState, ClarifyWithUser, ResearchQuestion, AgentInputState
+from Shivi_DeepResearch_Agent.prompts import clarify_with_user_instructions, transform_messages_into_research_topic_prompt
+from Shivi_DeepResearch_Agent.state_scope import AgentState, ClarifyWithUser, ResearchQuestion, AgentInputState
 
 # ===== UTILITY FUNCTIONS =====
 
@@ -36,7 +36,7 @@ model = init_chat_model(model="openai:gpt-4.1", temperature=0.0)
 def clarify_with_user(state: AgentState) -> Command[Literal["write_research_brief", "__end__"]]:
     """
     Determine if the user's request contains sufficient information to proceed with research.
-
+    
     Uses structured output to make deterministic decisions and avoid hallucination.
     Routes to either research brief generation or ends with a clarification question.
     """
@@ -49,7 +49,7 @@ def clarify_with_user(state: AgentState) -> Command[Literal["write_research_brie
             date=get_today_str()
         ))
     ])
-
+    
     # Route based on clarification need
     if response.need_clarification:
         return Command(
@@ -65,13 +65,13 @@ def clarify_with_user(state: AgentState) -> Command[Literal["write_research_brie
 def write_research_brief(state: AgentState):
     """
     Transform the conversation history into a comprehensive research brief.
-
+    
     Uses structured output to ensure the brief follows the required format
     and contains all necessary details for effective research.
     """
     # Set up structured output model
     structured_output_model = model.with_structured_output(ResearchQuestion)
-
+    
     # Generate research brief from conversation history
     response = structured_output_model.invoke([
         HumanMessage(content=transform_messages_into_research_topic_prompt.format(
@@ -80,7 +80,7 @@ def write_research_brief(state: AgentState):
             date=get_today_str()
         ))
     ])
-
+    
     # Update state with generated research brief and pass it to the supervisor
     return {
         "research_brief": response.research_brief,

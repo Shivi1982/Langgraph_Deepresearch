@@ -1,5 +1,9 @@
+#This is the project/package name- Shivi_DeepResearch_Agent
+# It’s used when you install your project as a Python package (e.g., pip install -e .)
+# Example: if pyproject.toml says name = "foo", then you can later import foo in Python after installing it.
+
 [project]
-name = "deep_research_from_scratch"
+name = "Shivi_DeepResearch_Agent"
 version = "0.1.0"
 description = "Build a deep research agent from scratch"
 requires-python = ">=3.11"
@@ -28,10 +32,10 @@ requires = ["setuptools>=73.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["deep_research_from_scratch"]
+packages = ["Shivi_DeepResearch_Agent"]
 
 [tool.setuptools.package-dir]
-"deep_research_from_scratch" = "src/deep_research_from_scratch"
+"Shivi_DeepResearch_Agent" = "src/Shivi_DeepResearch_Agent"
 
 [tool.setuptools.package-data]
 "*" = ["py.typed"]

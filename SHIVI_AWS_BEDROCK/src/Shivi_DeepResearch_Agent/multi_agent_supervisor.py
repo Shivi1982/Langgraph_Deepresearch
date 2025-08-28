@@ -25,14 +25,14 @@ from langchain_core.messages import (
 from langgraph.graph import StateGraph, START, END
 from langgraph.types import Command
 
-from deep_research_from_scratch.prompts import lead_researcher_prompt
-from deep_research_from_scratch.research_agent import researcher_agent
-from deep_research_from_scratch.state_multi_agent_supervisor import (
+from Shivi_DeepResearch_Agent.prompts import lead_researcher_prompt
+from Shivi_DeepResearch_Agent.research_agent import researcher_agent
+from Shivi_DeepResearch_Agent.state_multi_agent_supervisor import (
     SupervisorState, 
     ConductResearch, 
     ResearchComplete
 )
-from deep_research_from_scratch.utils import get_today_str, think_tool
+from Shivi_DeepResearch_Agent.utils import get_today_str, think_tool
 
 def get_notes_from_tool_calls(messages: list[BaseMessage]) -> list[str]:
     """Extract research notes from ToolMessage objects in supervisor message history.
